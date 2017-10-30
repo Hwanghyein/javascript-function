@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+        function prin(name, mid, end)
+        {
+            result = "";
+            var under = 10 - mid;
+            for (var i = mid; i > 0; i--) {
+                result += "*";
+            }
+            for (var i = under; i > 0; i--) {
+                result += "_";
+            }
+            result += " + ";
+            var under = 10 - end;
+            for (var i = end; i > 0; i--) {
+                result += "*";
+            }
+            for (var i = under; i > 0; i--) {
+                result += "_";
+            } 
+            result += " = ";
+            under = 20 - (mid + end);
+            for (var i = mid + end; i > 0; i--) {
+                result += "*";
+            }
+            for (var i = under; i > 0; i--) {
+                result += "_";
+            } 
+            console.log(name + " : " + result);
+        }
+        var A_mid = 10;
+        var A_end = 8;
+        var B_mid = 1;
+        var B_end = 2;
+        var C_mid = 9;
+        var C_end = 5;
+        // A 학생 출력
+        prin("A", A_mid, A_end);
+        
+        // B  학생 출력        
+        prin("B", B_mid, B_end);
+        // C 학생 출력
+        prin("C", C_mid, C_end);
+    </script>
+</head>
+<body>
+</body>
+</html>
