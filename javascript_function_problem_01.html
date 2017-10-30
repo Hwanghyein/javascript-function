@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+       function avg(javascript, python, java, ruby, swift) {
+	   result = (javascript + python + java + ruby + swift)/5;
+	   return result;	
+       }
+       function max(a, b){
+	   result = (a > b) ? a : b;
+	   return result;
+       }
+       function min(a, b){
+          result = (a < b) ? a : b;
+          return result;
+       }
+       function prin( cla, avg, max, min){
+          console.log( cla +"학생의 평균 점수는"+ avg + ' , 최고 점수는 ' + max + ' , 최하 점수는 ' + min + ' 입니다.');
+       }
+       var A_javascript = 90;
+       var A_python= 80;
+       var A_java = 50;
+       var A_ruby = 40;
+       var A_swift = 10;
+       var B_javascript = 90;
+       var B_python= 30;
+       var B_java = 100;
+       var B_ruby = 50;
+       var B_swift = 50;
+       var C_javascript = 20;
+       var C_python= 30;
+       var C_java = 60;
+       var C_ruby = 50;
+       var C_swift = 20;
+       var A_average = avg(A_javascript, A_python, A_java, A_ruby, A_swift);
+       var B_average = avg(B_javascript, B_python, B_java, B_ruby, B_swift);
+       var C_average = avg(C_javascript, C_python, C_java, C_ruby, C_swift);
+       var A_max = 0;
+       A_max = max(A_max, A_javascript);
+       A_max = max(A_max, A_python);
+       A_max = max(A_max, A_java);
+       A_max = max(A_max, A_ruby);
+       A_max = max(A_max, A_swift);
+       var B_max = 0;
+       B_max = max(B_max, B_javascript);
+       B_max = max(B_max, B_python);
+       B_max = max(B_max, B_java);
+       B_max = max(B_max, B_ruby);
+       B_max = max(B_max, B_swift);
+       var C_max = 0;
+       C_max = max(C_max, C_javascript);
+       C_max = max(C_max, C_python);
+       C_max = max(C_max, C_java);
+       C_max = max(C_max, C_ruby);
+       C_max = max(C_max, C_swift);
+       var A_min = 100;
+       A_min = min(A_min, A_javascript);
+       A_min = min(A_min, A_python);
+       A_min = min(A_min, A_java);
+       A_min = min(A_min, A_ruby);
+       A_min = min(A_min, A_swift);
+       var B_min = 100;
+       B_min = min(B_min, B_javascript);
+       B_min = min(B_min, B_python);
+       B_min = min(B_min, B_java);
+       B_min = min(B_min, B_ruby);
+       B_min = min(B_min, B_swift);
+       var C_min = 100;
+       C_min = min(C_min, C_javascript);
+       C_min = min(C_min, C_python);
+       C_min = min(C_min, C_java);
+       C_min = min(C_min, C_ruby);
+       C_min = min(C_min, C_swift);
+       prin("A", A_average, A_max, A_min);
+       prin("B", B_average, B_max, B_min);
+       prin("C", C_average, C_max, C_min);
+    </script>
+</head>
+<body>
+</body>
+</html>
