@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+      function print_scores_chart() {
+        var array = new Array();
+        var string = "";
+        for (var i = 0 ; i < arguments.length; i++) {
+            array[i] = arguments[i]; 
+        }
+        var max = array.reduce( function (previous, current) { 
+            return previous > current ? previous:current;
+        });
+        var min = array.reduce( function (previous, current) { 
+            return previous > current ? current:previous;
+        });
+        console.log("-------------");
+        for (var i = 10; i >= 1; i--) {
+            string = i+" \t";
+            for (var j = 0 ; j < arguments.length; j++) {
+                if(arguments[j]>=i)
+                    string = string+"* "
+                else
+                    string = string+"  "
+            }
+            if (max == i) {string = string+"<- max"}
+            if (min == i ) {string = string+"<- min"}
+            console.log(string);
+        }
+        if(min == 0 && max ==0)
+            console.log("-------------\t <- max,min\n\n");
+        if(min == 0 ){
+            console.log("-------------\t <- min\n\n");
+        }
+        else{
+            console.log("------------- \n\n");
+        }
+      }
+      print_scores_chart(1,1);
+      print_scores_chart(10, 1, 10, 1, 5, 5);
+      print_scores_chart(5, 2, 2, 9, 3, 5, 9);
+      print_scores_chart(5, 2, 0, 9, 3, 5, 9); 
+    </script>
+</head>
+<body>
+</body>
+</html>
